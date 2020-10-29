@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GAME</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" defer src="src/main.js"></script>
+  </head>
+  <body>
+    <div class="game">
+      <img src="img/background.png" alt="" />
+      <button class="btn-play">
+        <i class="fa fa-play"></i>
+      </button>
+      <div class="time"></div>
+      <div class="count"></div>
+      <div class="game-field"></div>
+    </div>
+    <div class="popup hide">
+      <button class="btn-replay">
+        <i class="fas fa-redo-alt"></i>
+      </button>
+      <p class="text"></p>
+    </div>
+    <div class="sound">
+      <audio src="sound/bg.mp3" class="sound-bg"></audio>
+      <audio src="sound/alert.wav" class="sound-alert"></audio>
+      <audio src="sound/bug_pull.mp3" class="sound-bug"></audio>
+      <audio src="sound/carrot_pull.mp3" class="sound-carrot"></audio>
+      <audio src="sound/game_win.mp3" class="sound-win"></audio>
+    </div>
+  </body>
+</html>

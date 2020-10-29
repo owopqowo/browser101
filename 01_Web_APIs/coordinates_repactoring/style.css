@@ -1,0 +1,59 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  overflow: hidden;
+  cursor: none;
+}
+
+.target {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translate(50%, 50%);
+  font-size: 18px;
+  color: #fff;
+}
+
+.target::before,
+.target::after {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.target::before {
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 1px;
+}
+
+.target::after {
+  top: -100%;
+  left: 0;
+  width: 1px;
+  height: 200%;
+}
+
+.target .img {
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background-image: url(img/target.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.target .txt {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 20px;
+}

@@ -1,0 +1,124 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  margin: 0;
+}
+button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.game {
+  position: relative;
+  width: 1000px;
+  height: 562px;
+}
+.game > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-play {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid #000;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 20px;
+  background-color: #efc7c7;
+}
+.time {
+  position: absolute;
+  top: 70px;
+  left: calc(50% - 40px);
+  width: 80px;
+  box-sizing: border-box;
+  padding: 3px 0 5px;
+  border-radius: 10px;
+  border: 3px solid #000;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fff;
+  visibility: hidden;
+  user-select: none;
+}
+.count {
+  position: absolute;
+  top: 120px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 3px solid #000;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  background: #efc7c7;
+  visibility: hidden;
+  user-select: none;
+}
+.game-field {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+}
+.game-field > img {
+  position: absolute;
+  transition-duration: 0.2s;
+}
+.game-field > img:hover {
+  transform: scale(1.1);
+}
+.game-field > .bug {
+  z-index: 10;
+}
+.popup {
+  display: block;
+  position: absolute;
+  z-index: 20;
+  left: calc(50% - 200px);
+  top: calc(50% - 65px);
+  width: 400px;
+  height: 130px;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 30px;
+  color: #fff;
+}
+.popup.hide {
+  display: none;
+}
+.btn-replay {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 3px solid #000;
+  font-size: 20px;
+  background-color: #efc7c7;
+}

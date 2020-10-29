@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinate</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      background: indianred;
+    }
+    .special {
+      background: indigo;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      right: 0;
+    }
+    button {
+      padding: 2px 5px;
+    }
+  </style>
+  <body>
+    <header>
+      <button class="scrollBy100">scroll by 100px</button>
+      <button class="scrollTo100">scroll to 100px</button>
+      <button class="scrollIntoSpecial">scroll to special</button>
+    </header>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="special"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- 
+    <script>
+      const special = document.querySelector(".special"),
+        scrollBy100 = document.querySelector(".scrollBy100"),
+        scrollTo100 = document.querySelector(".scrollTo100"),
+        scrollIntoSpecial = document.querySelector(".scrollIntoSpecial");
+      special.addEventListener("click", function () {
+        const rect = this.getBoundingClientRect();
+        console.log(rect);
+        console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`);
+        console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`);
+      });
+      scrollBy100.addEventListener("click", function () {
+        const scrollTop = document.querySelector("html").scrollTop;
+        window.scroll({
+          top: scrollTop + 100,
+          behavior: "smooth",
+        });
+      });
+      scrollTo100.addEventListener("click", function () {
+        window.scroll({
+          top: 100,
+          behavior: "smooth",
+        });
+      });
+      scrollIntoSpecial.addEventListener("click", function () {
+        window.scroll({
+          top: special.offsetTop,
+          behavior: "smooth",
+        });
+      });
+    </script>
+    -->
+
+    <script>
+      const special = document.querySelector(".special");
+      special.addEventListener("click", (event) => {
+        const rect = special.getBoundingClientRect();
+        console.log(rect);
+        console.log(`clientX: ${event.clientX}, clientY: ${event.clientY}`);
+        console.log(`pageX: ${event.pageX}, pageY: ${event.pageY}`);
+      });
+      const scrollBy100 = document.querySelector(".scrollBy100");
+      const scrollTo100 = document.querySelector(".scrollTo100");
+      const scrollIntoSpecial = document.querySelector(".scrollIntoSpecial");
+      scrollBy100.addEventListener("click", () => {
+        window.scrollBy(0, 100);
+      });
+      scrollTo100.addEventListener("click", () => {
+        window.scrollTo(0, 100);
+      });
+      scrollIntoSpecial.addEventListener("click", () => {
+        special.scrollIntoView();
+      });
+    </script>
+  </body>
+</html>
